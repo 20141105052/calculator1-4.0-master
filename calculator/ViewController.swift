@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBOutlet weak var x: UITextField!
+    var flog:Bool=false;
     var flag=0
     var temp=0.0
 
@@ -123,6 +124,12 @@ class ViewController: UIViewController {
 
         default:
             break
+        }
+    }
+    @IBAction func point(sender: AnyObject) {
+        if(flog==false){
+            x.text=x.text!+"."
+            flog=true;
         }
     }
     @IBAction func clear(sender: AnyObject) {
